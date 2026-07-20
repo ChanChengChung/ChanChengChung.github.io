@@ -98,6 +98,12 @@ a:hover {
   background: var(--accent-soft);
   text-decoration: none;
 }
+/* 🧑‍🏫 滚动高亮：当前所在板块对应的导航项（由 useActiveSection 打上 .is-active） */
+.masthead__nav a.is-active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
 .theme-toggle {
   background: none;
   border: none;

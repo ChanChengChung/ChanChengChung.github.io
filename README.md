@@ -55,6 +55,12 @@ npm run preview
 
 ## 3. 部署到 GitHub Pages（免费）
 
+> 🔒 **隐私建议（先 Private，确认无误再转 Public）**
+> 创建 GitHub 仓库时，**Visibility 先选 `Private`**。这样在你本地预览、确认内容/排版
+> 都没问题之前，外人搜不到也看不到。等你核对 OK，再进仓库
+> **Settings → General → 拉到最底 → Change visibility → 选 Public** 即可，无需改任何代码。
+> （本仓库目前只在你本机，尚未推到 GitHub；首次 push 时按上面的 Private 方式建仓库即可。）
+
 项目 `vite.config.ts` 已设 `base: './'`，产物用相对路径，直接传任意静态托管即可。
 
 **方式 A：手动上传**
@@ -143,19 +149,25 @@ https://www.bing.com/ping?sitemap=https://ChanChengChung.github.io/sitemap.xml
 
 ```
 PersonalWebsite/
-├── index.html              # 入口 HTML（引入 Font Awesome 图标）
+├── index.html              # 入口 HTML（SPA 外壳 + SEO/OG/JSON-LD）
 ├── package.json
 ├── vite.config.ts          # base:'./' 便于静态托管
+├── LEARNING.md             # 🧑‍🏫 导师版学习指南（怎么拿本项目练 React）
+├── EXERCISES.md            # 🧑‍🏫 分阶练习（L1–L3，配套 LEARNING.md）
 ├── public/
+│   ├── images/             # avatar.jpg / og-image.jpg
 │   └── files/CV.pdf         # 你的简历（CV 链接）
 └── src/
-    ├── main.tsx
-    ├── App.tsx              # 组合所有版块 + 暗色模式状态
-    ├── index.css            # 全部样式（含明暗双主题）
-    ├── types.ts             # 内容数据结构定义
-    ├── data/profile.ts      # ★ 所有文字内容都在这里
+    ├── main.tsx            # 应用入口
+    ├── App.tsx             # 组合所有版块（主题逻辑下沉到 Hook）
+    ├── index.css           # 全部样式（含明暗双主题）
+    ├── types.ts            # 内容数据结构定义
+    ├── data/profile.ts     # ★ 所有文字内容都在这里
+    ├── hooks/              # 🧑‍🏫 自定义 Hook（学习重点）
+    │   ├── useTheme.ts          # 暗色模式（useState 惰性初始化 + useEffect）
+    │   └── useActiveSection.ts  # 滚动高亮（IntersectionObserver + 清理函数）
     ├── components/
-    │   ├── Navbar.tsx        # 顶部导航 + 主题切换 + 移动端菜单
+    │   ├── Navbar.tsx        # 顶部导航 + 主题切换 + 滚动高亮 + 移动端菜单
     │   ├── Sidebar.tsx       # 左侧个人栏
     │   └── ui.tsx            # Section / Timeline / ProjectCard 复用组件
     └── sections/            # About / News / Projects / Experience /

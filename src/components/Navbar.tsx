@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import { profile } from '../data/profile'
+import { useActiveSection } from '../hooks/useActiveSection'
 
 // 顶部导航：站点名 + 锚点链接 + CV + 暗色模式切换 + 移动端汉堡菜单
+// 🧑‍🏫 注意 NAV 里的 id 必须和各 section 组件最外层 <section id="..."> 一致，
+//    否则锚点跳转和滚动高亮都会失效。这是「数据驱动 UI」的典型约定。
 const NAV = [
   { id: 'about', label: 'About' },
   { id: 'news', label: 'News' },
@@ -20,6 +23,8 @@ interface Props {
 
 export default function Navbar({ theme, onToggle }: Props) {
   const [open, setOpen] = useState(false)
+  // 🧑‍🏫 用自定义 Hook 算出当前滚到哪个板块，给对应导航项加高亮
+  const activeId = useActiveSection(NAV.map((n) => n.id))
 
   return (
     <header className="masthead">
@@ -38,7 +43,12 @@ export default function Navbar({ theme, onToggle }: Props) {
 
         <nav className={`masthead__nav ${open ? 'is-open' : ''}`}>
           {NAV.map((n) => (
-            <a key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}>
+            <a
+              key={n.id}
+              href={`#${n.id}`}
+              onClick={() => setOpen(false)}
+              className={activeId === n.id ? 'is-active' : undefined}
+            >
               {n.label}
             </a>
           ))}
