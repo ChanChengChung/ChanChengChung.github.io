@@ -1,6 +1,6 @@
 # Personal Website — Zeon Chen Zhengzhong (陳政中)
 
-基于 **React 18 + TypeScript + Vite + CSS** 的个人网站，布局参考 [kaikwanlau.github.io](https://kaikwanlau.github.io/)（AcademicPages / Minimal Mistakes 学术模板）：
+基于 **React 18 + TypeScript + Vite + CSS** 的自建个人网站 / personal portfolio：
 
 - 顶部 **sticky 导航**（锚点跳转 + 暗色模式切换 + 移动端汉堡菜单）
 - 左侧 **sticky 个人栏**（头像 / 姓名 / 简介 / 社交链接）
