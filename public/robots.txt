@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # 部署后把下面这行改成你的真实地址
-Sitemap: https://chenzhengzhong.github.io/sitemap.xml
+Sitemap: https://ChanChengChung.github.io/sitemap.xml

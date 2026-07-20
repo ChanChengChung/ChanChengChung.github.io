@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 单页网站：只有一个地址。若以后加了子页面，照此追加 <url> 即可 -->
   <url>
-    <!-- 部署后把 chenzhengzhong 改成你的真实 GitHub 用户名 -->
-    <loc>https://chenzhengzhong.github.io/</loc>
+    <!-- 已替换为你的 GitHub 用户名 ChanChengChung；若以后改名，再调整 loc -->
+    <loc>https://ChanChengChung.github.io/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

@@ -110,11 +110,11 @@ jobs:
 - `public/sitemap.xml` → 站点地图（单页站只列首页）
 - `index.html` 里的 `<meta>` + JSON-LD `Person` 结构化数据 → 让 Google 知道这是"一个真人"
 
-> ⚠️ 部署前把 `index.html` / `robots.txt` / `sitemap.xml` 里所有的 `chenzhengzhong` 换成你的**真实 GitHub 用户名**；`og-image.jpg`、`email` 也按需替换。
+> ✅ 已按你的 GitHub 用户名 `ChanChengChung` 替换 `index.html` / `robots.txt` / `sitemap.xml` 里的域名；`og-image.jpg` 已用你上传的照片占位，`email` 仍需替换为你真实邮箱。
 
 ### 4.2 提交 sitemap（最关键的一步，5 分钟搞定）
 1. **Google Search Console**：<https://search.google.com/search-console>
-   - 添加属性 → 选 "URL 前缀" → 填 `https://chenzhengzhong.github.io/`
+   - 添加属性 → 选 "URL 前缀" → 填 `https://ChanChengChung.github.io/`
    - 验证方式选 **"HTML 标记"**：把 Google 给的 `<meta name="google-site-verification" ...>` 贴到 `index.html` 的 `<head>` 里，重新部署即可通过
    - 左侧 **站点地图** → 填 `sitemap.xml` → 提交
 2. **Bing Webmaster Tools**：<https://www.bing.com/webmasters> → 同样提交 sitemap（Bing 会同步给 DuckDuckGo，一举两得）
@@ -122,13 +122,13 @@ jobs:
 ### 4.3 主动"ping"搜索引擎（可选，加速收录）
 部署后访问这两个 URL（把用户名换掉），立刻通知爬虫：
 ```
-https://www.google.com/ping?sitemap=https://chenzhengzhong.github.io/sitemap.xml
-https://www.bing.com/ping?sitemap=https://chenzhengzhong.github.io/sitemap.xml
+https://www.google.com/ping?sitemap=https://ChanChengChung.github.io/sitemap.xml
+https://www.bing.com/ping?sitemap=https://ChanChengChung.github.io/sitemap.xml
 ```
 返回 `Sitemap Notification: Success` 即成功。
 
 ### 4.4 怎么验证"被搜到了"
-- 等 1–7 天，在 Google 搜 `site:chenzhengzhong.github.io` 或你的名字 `Zeon Chen Zhengzhong`
+- 等 1–7 天，在 Google 搜 `site:ChanChengChung.github.io` 或你的名字 `Zeon Chen Zhengzhong`
 - 在 Search Console 看"已编入索引的网页"数量
 - 想更快：多从其他网站/社交媒体链向你的站（外链越多，排名越高）
 

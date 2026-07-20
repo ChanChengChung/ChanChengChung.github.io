@@ -15,8 +15,8 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="author">
         <div className="author__avatar">
-          {/* 👇 占位头像（姓名首字母）。想用真实照片，见上方注释替换 <img> */}
-          <div className="avatar-placeholder">{initials(profile.name)}</div>
+          <img className="avatar-img" src="/images/avatar.jpg" alt={profile.name} />
+          {/* 旧占位头像：div.avatar-placeholder，已替换为真实照片 */}
         </div>
 
         <h3 className="author__name">{profile.name}</h3>
