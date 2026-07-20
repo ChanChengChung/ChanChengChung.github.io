@@ -14,6 +14,8 @@ const NAV = [
   { id: 'honors', label: 'Honors' },
   { id: 'skills', label: 'Skills' },
   { id: 'leadership', label: 'Leadership' },
+  { id: 'blog', label: 'Blog' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 interface Props {

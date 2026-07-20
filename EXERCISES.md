@@ -4,6 +4,11 @@
 > 做完一题 `npm run dev` 验证，再 `npm run build` 确认不报错。
 > 所有答案都能在 `LEARNING.md` 和现有代码里找到线索。
 
+> 📌 **L3 已由导师实现为「参考样例」**（对应本文件的 E8/E9/E10）：
+> `src/sections/Contact.tsx`（受控组件）、`src/sections/Blog.tsx` + `src/data/posts.ts`（数据驱动）、
+> `src/hooks/useTheme.test.ts`（Vitest 单测，跑 `npm test` 看 3 个用例通过）。
+> **不要只读——自己删掉重写一遍，才算真的练会。** L1/L2 仍留给你自己练。
+
 ---
 
 ## L1 · 入门（建立手感，1–2 小时）

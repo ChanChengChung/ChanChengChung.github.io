@@ -56,6 +56,17 @@ export interface LeadershipItem {
   points: string[]
 }
 
+// 博客文章（数据放在 src/data/posts.ts，与展示组件解耦）
+export interface Post {
+  title: string
+  date: string
+  /** 列表页的一句话摘要 */
+  excerpt: string
+  /** 正文段落，每条渲染成一个 <p> */
+  body: string[]
+  tags?: string[]
+}
+
 export interface Profile {
   name: string
   nameZh?: string

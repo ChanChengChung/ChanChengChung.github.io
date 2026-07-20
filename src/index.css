@@ -422,3 +422,85 @@ a:hover {
     gap: 0.8rem;
   }
 }
+
+/* ===== Blog 列表（L3-E9：数据驱动 UI 范例） ===== */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.post-item {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.post-item:last-child {
+  border-bottom: none;
+}
+.post-item__meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.post-item__title {
+  margin: 0.25rem 0 0.4rem;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+.post-item__excerpt {
+  font-style: italic;
+  color: var(--text);
+  margin: 0 0 0.6rem;
+}
+
+/* ===== Contact 表单（L3-E8：受控组件范例） ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 480px;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+.contact-form button {
+  align-self: flex-start;
+  padding: 0.55rem 1.3rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  opacity: 0.9;
+}
+.contact-form__ok {
+  color: var(--accent);
+  font-weight: 600;
+}
+.contact-form__hint {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

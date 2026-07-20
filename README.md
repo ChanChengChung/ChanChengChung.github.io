@@ -61,6 +61,26 @@ npm run preview
 > **Settings → General → 拉到最底 → Change visibility → 选 Public** 即可，无需改任何代码。
 > （本仓库目前只在你本机，尚未推到 GitHub；首次 push 时按上面的 Private 方式建仓库即可。）
 
+### 先把仓库推上去（首次，选 Private）
+
+本仓库目前只在本机（尚未关联 GitHub）。按下面顺序推，**建仓库时 Visibility 选 Private**：
+
+1. GitHub 网页点 **New repository**，仓库名填 `ChanChengChung.github.io`（用户站点，URL 最干净），
+   **Visibility 选 `Private`**，不要勾选 README / .gitignore（本地已包含）。
+2. 本地关联并首次推送：
+   ```bash
+   cd /Users/chenzhengzhong/Desktop/PersonalWebsite
+   git remote add origin https://github.com/ChanChengChung/ChanChengChung.github.io.git
+   git push -u origin main
+   ```
+   > ⚠️ GitHub 已不支持密码：提示输入密码时请填 **Personal Access Token**
+   > （GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)，勾 `repo` 权限）。
+   > 或配置 SSH key 一劳永逸。
+3. 开启 Pages：仓库 → **Settings → Pages → Source 选 GitHub Actions**，等 1–2 分钟，访问 `https://ChanChengChung.github.io/`。
+4. **本地 `npm run dev` 核对内容/排版无误后**，再进 **Settings → General → Change visibility → Public**。
+
+之后每次更新只需：`git add -A && git commit -m "..." && git push`。
+
 项目 `vite.config.ts` 已设 `base: './'`，产物用相对路径，直接传任意静态托管即可。
 
 **方式 A：手动上传**

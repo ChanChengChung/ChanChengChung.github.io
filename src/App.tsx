@@ -8,6 +8,8 @@ import Education from './sections/Education'
 import Honors from './sections/Honors'
 import Skills from './sections/Skills'
 import Leadership from './sections/Leadership'
+import Blog from './sections/Blog'
+import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import { useTheme } from './hooks/useTheme'
 
@@ -36,6 +38,8 @@ export default function App() {
           <Honors />
           <Skills />
           <Leadership />
+          <Blog />
+          <Contact />
         </main>
       </div>
       <Footer />
