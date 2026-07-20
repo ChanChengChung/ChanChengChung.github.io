@@ -19,11 +19,23 @@ export const profile: Profile = {
     { label: 'LinkedIn', icon: 'fa-brands fa-linkedin', url: 'https://www.linkedin.com/in/zhengzhong-chen-bbb764309/' },
   ],
 
-  about: [
-    "Hi, I'm Zeon Chen Zhengzhong (陳政中), a BSc Mathematics student (Minor in Artificial Intelligence) at the Chinese University of Hong Kong, expected to graduate in 2028.",
-    'My work sits at the intersection of AI and product: I am the co-founder and AI developer of NovelFlow, an AI startup building a structured content-generation engine for long-form narratives such as game storytelling and scriptwriting. I also do research on novel Transformer architectures (HH-Former at NVIDIA) and reinforcement learning (CUHK), and I am passionate about quantitative trading.',
-    'I care about building things that work end-to-end — from React frontends and FastAPI backends to PyTorch model implementations and data-driven performance analysis.',
-  ],
+  about: {
+    en: [
+      "Hi, I'm Zeon Chen Zhengzhong (陳政中), a BSc Mathematics student (Minor in Artificial Intelligence) at the Chinese University of Hong Kong, expected to graduate in 2028.",
+      'My work sits at the intersection of AI and product: I am the co-founder and AI developer of NovelFlow, an AI startup building a structured content-generation engine for long-form narratives such as game storytelling and scriptwriting. I also do research on novel Transformer architectures (HH-Former at NVIDIA) and reinforcement learning (CUHK), and I am passionate about quantitative trading.',
+      'I care about building things that work end-to-end — from React frontends and FastAPI backends to PyTorch model implementations and data-driven performance analysis.',
+    ],
+    zhCN: [
+      '你好，我是陈政中（Zeon Chen Zhengzhong），香港中文大学数学学士（人工智能辅修）学生，预计 2028 年毕业。',
+      '我的工作横跨人工智能与产品：我是 NovelFlow 的联合创始人兼 AI 开发者，这是一家致力于为长文本叙事（如游戏剧情、剧本）打造结构化内容生成引擎的 AI 创业公司。我也在研究新型 Transformer 架构（NVIDIA 的 HH-Former）与强化学习（香港中文大学），并对量化交易充满热情。',
+      '我注重打造端到端可用的产品——从 React 前端、FastAPI 后端，到 PyTorch 模型实现与数据驱动的性能分析。',
+    ],
+    zhTW: [
+      '你好，我是陳政中（Zeon Chen Zhengzhong），香港中文大學數學學士（人工智慧輔修）學生，預計 2028 年畢業。',
+      '我的工作橫跨人工智慧與產品：我是 NovelFlow 的聯合創始人兼 AI 開發者，這是一家致力於為長文本敘事（如遊戲劇情、劇本）打造結構化內容生成引擎的 AI 新創公司。我也在研究新型 Transformer 架構（NVIDIA 的 HH-Former）與強化學習（香港中文大學），並對量化交易充滿熱情。',
+      '我注重打造端到端可用的產品——從 React 前端、FastAPI 後端，到 PyTorch 模型實現與資料驅動的效能分析。',
+    ],
+  },
 
   news: [
     {

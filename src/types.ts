@@ -1,6 +1,8 @@
 // 网站所有内容的数据结构定义。
 // 想加板块/改字段，先看这里，再去 src/data/profile.ts 填真实内容。
 
+import type { Lang } from './i18n/translations'
+
 export interface SocialLink {
   label: string
   /** Font Awesome 类名，例如 "fa-brands fa-github" / "fa-solid fa-envelope" */
@@ -75,7 +77,7 @@ export interface Profile {
   email: string
   phone?: string
   social: SocialLink[]
-  about: string[]
+  about: Record<Lang, string[]>
   news: NewsItem[]
   projects: Project[]
   experience: ExperienceItem[]

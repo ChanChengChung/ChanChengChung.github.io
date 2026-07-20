@@ -504,3 +504,114 @@ a:hover {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* ===== 语言切换（EN / 简 / 繁） ===== */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 0.2rem;
+}
+.lang-switch button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.55rem;
+  line-height: 1;
+}
+.lang-switch button + button {
+  border-left: 1px solid var(--border);
+}
+.lang-switch button:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.lang-switch button.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ===== Fun Facts / chiikawa 照片墙 ===== */
+.funfacts__hero {
+  margin-bottom: 1.6rem;
+}
+.funfacts__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+.funfacts__intro {
+  margin: 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.chiikawa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.chiikawa-card {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.chiikawa-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-alt);
+}
+.chiikawa-card figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.5rem 0.4rem;
+  text-align: center;
+}
+.chiikawa-card__zh {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.chiikawa-card__en {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+/* 空位占位卡：虚线框 + 相机图标，提示"待添加" */
+.chiikawa-card--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 150px;
+  border-style: dashed;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+.chiikawa-card--empty i {
+  font-size: 1.4rem;
+}
+
+/* ===== 窄屏适配 ===== */
+@media (max-width: 860px) {
+  .lang-switch {
+    align-self: center;
+    margin: 0.3rem 0;
+  }
+  .chiikawa-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

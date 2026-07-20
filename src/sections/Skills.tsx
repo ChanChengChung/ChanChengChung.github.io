@@ -1,9 +1,11 @@
 import { Section } from '../components/ui'
 import { profile } from '../data/profile'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function Skills() {
+  const { t } = useLanguage()
   return (
-    <Section id="skills" title="Skills">
+    <Section id="skills" title={t('section_skills')}>
       <div className="skill-groups">
         {profile.skills.map((g) => (
           <div className="skill-group" key={g.category}>

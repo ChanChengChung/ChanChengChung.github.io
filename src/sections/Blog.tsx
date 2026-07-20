@@ -1,12 +1,14 @@
 import { Section } from '../components/ui'
 import { posts } from '../data/posts'
+import { useLanguage } from '../i18n/LanguageContext'
 
 // 🧑‍🏫 导师讲解：Blog 是「数据驱动 UI」的范例（对应 EXERCISES.md L3-E9）。
 // 数据在 src/data/posts.ts，本组件只负责「怎么把数据画出来」。
 // 加文章 = 改数据文件，不动这里。这就是 React 项目里最常见的「数据 / 展示分离」。
 export default function Blog() {
+  const { t } = useLanguage()
   return (
-    <Section id="blog" title="Blog">
+    <Section id="blog" title={t('section_blog')}>
       <div className="post-list">
         {posts.map((p, i) => (
           <article className="post-item" key={i}>
